@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin Dashboard | Reservations</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<div class="dashboard-header">
+<h1>📋 Reservation Dashboard</h1>
+<button onclick="openDashboard()">Open Dashboard</button>
+
+<button id="logoutBtn">Logout</button>
+</div>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Date</th>
+<th>Time</th>
+<th>Guests</th>
+<th>Status</th>
+<th>Actions</th>
+</tr>
+</thead>
+
+<tbody id="reservationTable"></tbody>
+
+</table>
+<script>
+
+function openDashboard(){
+
+window.location.href="admin-dashboard.html"
+
+}
+
+
+/* LOAD RESERVATIONS */
+
+fetch("http://localhost:5000/api/reservations")
+
+.then(res=>res.json())
+
+.then(data=>{
+
+const list=document.getElementById("reservationList")
+
+data.forEach(r=>{
+
+let div=document.createElement("div")
+
+div.className="reservation-card"
+
+div.innerHTML=`
+<b>${r.name}</b><br>
+${r.email}<br>
+${r.date} | ${r.time}<br>
+Guests: ${r.guests}
+`
+
+list.appendChild(div)
+
+})
+
+})
+
+</script>
+<script src="admin.js"></script>
+<script>
+const darkBtn = document.getElementById("darkToggle");
+
+darkBtn.addEventListener("click", () => {
+
+document.body.classList.toggle("dark-mode");
+
+if(document.body.classList.contains("dark-mode")){
+darkBtn.innerText = "☀️";
+}
+else{
+darkBtn.innerText = "🌙";
+}
+
+});
+</script>
+</body>
+</html>

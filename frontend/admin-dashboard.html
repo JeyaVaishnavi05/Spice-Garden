@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Admin Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="admin.css">
+
+
+<style>
+
+body{
+font-family:Poppins;
+background:#f4f4f4;
+padding:40px;
+}
+
+.dashboard{
+max-width:900px;
+margin:auto;
+}
+
+.section{
+background:white;
+padding:20px;
+margin-bottom:30px;
+border-radius:8px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+input,select{
+padding:10px;
+margin:8px 0;
+width:100%;
+}
+
+button{
+padding:10px 20px;
+background:#27ae60;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+.menu-item{
+display:flex;
+justify-content:space-between;
+margin-bottom:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+<header>
+
+<div class="logo">🍽️ Spice Garden</div>
+
+<nav>
+<a href="index.html#menu">Menu</a>
+<a href="index.html#reserve">Reservations</a>
+<a href="index.html#events">Events</a>
+<a href="admin-login.html">Admin</a>
+</nav>
+
+<button id="darkToggle">🌙</button>
+
+</header>
+<div class="dashboard">
+
+<h1>🍽️ Admin Dashboard</h1>
+
+
+<!-- ADD MENU ITEM -->
+
+<div class="section">
+
+<h2>Add Menu Item</h2>
+
+<input id="name" placeholder="Food Name">
+
+<input id="price" placeholder="Price">
+
+<input id="image" placeholder="Image Name (pizza.jpg)">
+
+<select id="cuisine">
+
+<option>Indian</option>
+<option>Chinese</option>
+<option>Italian</option>
+<option>Dessert</option>
+<option>Beverage</option>
+
+</select>
+
+<button onclick="addMenu()">Add Item</button>
+
+</div>
+
+
+
+<!-- MENU LIST -->
+
+<div class="section">
+
+<h2>Delete Menu Items</h2>
+
+<div id="menuList"></div>
+
+</div>
+
+
+
+<!-- RESERVATIONS -->
+
+<div class="section">
+
+<h2>Reservations</h2>
+
+<div id="reservationList"></div>
+
+</div>
+
+</div>
+
+
+<script src="admin-dashboard.js"></script>
+<script>
+const darkBtn = document.getElementById("darkToggle");
+
+darkBtn.addEventListener("click", () => {
+
+document.body.classList.toggle("dark-mode");
+
+if(document.body.classList.contains("dark-mode")){
+darkBtn.innerText = "☀️";
+}
+else{
+darkBtn.innerText = "🌙";
+}
+
+});
+</script>
+</body>
+
+</html>

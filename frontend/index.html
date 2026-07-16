@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<title>Spice Garden | Fine Dining</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<header>
+
+<div class="logo">🍽️ Spice Garden</div>
+
+<nav>
+<a href="#menu">Menu</a>
+<a href="#reserve">Reservations</a>
+<a href="#events">Events</a>
+<a href="admin-login.html">Admin</a>
+
+</nav>
+
+<button id="darkToggle">🌙</button>
+
+</header>
+
+
+
+<!-- SEARCH + FILTER -->
+
+<div class="controls">
+
+<input
+type="text"
+id="searchBar"
+placeholder="🔍 Search food..."
+onkeyup="searchFood()"
+>
+<select id="filter" onchange="filterCuisine()">
+
+<option value="all">All Cuisines</option>
+<option value="Indian">Indian</option>
+<option value="Chinese">Chinese</option>
+<option value="Italian">Italian</option>
+<option value="Dessert">Dessert</option>
+<option value="Beverage">Beverage</option>
+
+</select>
+
+</div>
+
+
+<!-- HERO -->
+<section class="hero">
+
+<h2>Experience Fine Dining</h2>
+
+<p>Authentic Flavors • Premium Ambience • Memorable Moments</p>
+
+<button class="hero-btn">Book a Table</button>
+
+</section>
+
+
+<!-- MENU -->
+<section id="menu">
+
+<h2>Our Special Menu</h2>
+
+<div class="menu-container" id="menuContainer"></div>
+
+</section>
+
+
+<section id="chef">
+
+<h2>⭐ Chef Recommended</h2>
+
+<div class="chef-container">
+
+<div class="chef-card">
+<img src="images/pasta.jpg">
+<h3>Truffle Pasta</h3>
+<p>Rich creamy pasta infused with truffle flavor.</p>
+</div>
+
+<div class="chef-card">
+<img src="images/biryani.jpg">
+<h3>Signature Biryani</h3>
+<p>Chef's special aromatic biryani cooked with spices.</p>
+</div>
+
+<div class="chef-card">
+<img src="images/cake.jpg">
+<h3>Chocolate Lava Cake</h3>
+<p>Warm chocolate cake with molten center.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- RESERVATION -->
+<section id="reserve">
+
+<h2>Reserve Your Table</h2>
+
+<form id="reservationForm">
+
+<input type="text" name="name" placeholder="Your Name" required>
+
+<input type="email" name="email" placeholder="Email Address" required>
+
+<input type="date" name="date" required>
+
+<input type="time" name="time" required>
+
+<input type="number" name="guests" placeholder="Number of Guests" required>
+
+<button type="submit">Reserve Now</button>
+
+</form>
+
+</section>
+
+
+<!-- EVENTS -->
+<section id="events">
+
+<h2>Upcoming Events</h2>
+
+<div id="events-list" class="grid"></div>
+
+</section>
+
+
+<footer>
+
+<p>© 2026 Spice Garden Restaurant | Designed with ❤️</p>
+
+
+
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

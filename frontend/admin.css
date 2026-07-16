@@ -1,0 +1,247 @@
+/* =========================
+GLOBAL
+========================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:"Poppins", Arial, sans-serif;
+background:linear-gradient(135deg,#fff4e4 0%, #fbe6c1 100%);
+color:#333;
+padding-top:80px;
+}
+
+/* =========================
+HEADER
+========================= */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+background:#111827;
+color:white;
+z-index:1000;
+}
+
+.logo{
+font-size:22px;
+font-weight:600;
+}
+
+nav{
+display:flex;
+align-items:center;
+gap:25px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:500;
+}
+
+nav a:hover{
+color:#27ae60;
+}
+
+/* =========================
+DARK MODE BUTTON
+========================= */
+
+#darkToggle{
+background:#27ae60;
+color:white;
+border:none;
+padding:8px 14px;
+border-radius:20px;
+cursor:pointer;
+font-size:16px;
+width:auto;
+}
+
+/* =========================
+DASHBOARD LAYOUT
+========================= */
+
+.dashboard{
+max-width:1000px;
+margin:40px auto;
+padding:20px;
+}
+
+.dashboard-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:20px;
+}
+
+h1{
+text-align:center;
+margin-bottom:30px;
+color:#333;
+}
+
+/* =========================
+SECTIONS
+========================= */
+
+.section{
+background:white;
+padding:20px;
+margin-bottom:30px;
+border-radius:10px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* =========================
+FORMS
+========================= */
+
+input,select{
+padding:10px;
+margin:8px 0;
+width:100%;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+/* =========================
+BUTTONS
+========================= */
+
+button{
+padding:8px 14px;
+background:#27ae60;
+color:white;
+border:none;
+border-radius:6px;
+cursor:pointer;
+font-size:14px;
+}
+
+button:hover{
+opacity:0.9;
+}
+
+#logoutBtn{
+background:#e74c3c;
+}
+
+/* =========================
+MENU LIST
+========================= */
+
+.menu-item{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:10px 0;
+border-bottom:1px solid #eee;
+}
+
+/* =========================
+TABLE
+========================= */
+
+table{
+width:100%;
+border-collapse:collapse;
+background:white;
+}
+
+th,td{
+padding:12px;
+border:1px solid #ddd;
+text-align:center;
+}
+
+th{
+background:#111;
+color:white;
+}
+
+tr:hover{
+background:#f1f1f1;
+}
+
+/* =========================
+LOGIN PAGE
+========================= */
+
+.login-container{
+width:350px;
+margin:120px auto;
+background:white;
+padding:40px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+/* =========================
+ADMIN FOOTER LINK
+========================= */
+
+.admin-link{
+display:block;
+margin-top:10px;
+color:#27ae60;
+text-decoration:none;
+font-weight:600;
+}
+
+.admin-link:hover{
+text-decoration:underline;
+}
+
+/* =========================
+DARK MODE
+========================= */
+
+.dark-mode{
+background:#121212;
+color:white;
+}
+
+.dark-mode header{
+background:#1e1e1e;
+}
+
+.dark-mode .section{
+background:#1f1f1f;
+}
+
+.dark-mode .login-container{
+background:#1f1f1f;
+}
+
+.dark-mode input,
+.dark-mode select{
+background:#2a2a2a;
+color:white;
+border:none;
+}
+
+.dark-mode table{
+background:#1f1f1f;
+color:white;
+}
+
+.dark-mode th{
+background:#333;
+}
+
+.dark-mode tr:hover{
+background:#2a2a2a;
+}
